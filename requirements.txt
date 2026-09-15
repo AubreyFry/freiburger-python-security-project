@@ -3,7 +3,7 @@ cryptography>=50.0.1,<51
 
 # domain_recon.py — HTTP, DNS, and PDF report generation
 requests==2.34.2
-dnspython>=2.6,<3
+dnspython>=2.6.1,<3
 reportlab>=4.1,<5
 
 # domain_recon.py — optional WHOIS fallback for TLDs that don't serve RDAP
