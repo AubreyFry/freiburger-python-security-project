@@ -89,6 +89,11 @@ command-line flags, which take precedence.
 python log_parser.py --lab     # offline demo, exercises the detectors
 ```
 
+## Also in this repo
+
+`main.py` is a short `requests` example kept from a different CSIT 2033
+assignment, for reference. It is not part of the three tools above.
+
 ## Testing
 
 All three tools carry built-in verification that runs without network access:
