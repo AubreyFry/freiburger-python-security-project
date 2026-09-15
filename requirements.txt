@@ -1,4 +1,4 @@
-# portscan.py — TLS certificate inspection
+# portscan.py (optional) — certificate details and the --lab HTTPS service
 cryptography>=50.0.1,<51
 
 # domain_recon.py — HTTP, DNS, and PDF report generation
