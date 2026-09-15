@@ -1,3 +1,15 @@
-requests==2.34.2
+# portscan.py — TLS certificate inspection
 cryptography>=50.0.1,<51
+
+# domain_recon.py — HTTP, DNS, and PDF report generation
+requests==2.34.2
+dnspython>=2.6,<3
+reportlab>=4.1,<5
+
+# domain_recon.py — optional WHOIS fallback for TLDs that don't serve RDAP
+python-whois>=0.9,<1
+
+# testing
 pytest>=9.1.1,<10
+
+# log_parser.py requires no third-party packages (standard library only)
