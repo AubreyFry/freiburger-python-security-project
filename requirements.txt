@@ -1,5 +1,5 @@
 # portscan.py (optional) — certificate details and the --lab HTTPS service
-cryptography>=50.0.1,<51
+cryptography>=50.0.2,<51
 
 # domain_recon.py — HTTP, DNS, and PDF report generation
 requests==2.34.2
