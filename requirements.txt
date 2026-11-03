@@ -10,6 +10,6 @@ reportlab>=5.0.1,<6
 python-whois>=0.9.6,<1
 
 # testing
-pytest>=9.1.1,<10
+pytest>=9.2.0,<10
 
 # log_parser.py requires no third-party packages (standard library only)
