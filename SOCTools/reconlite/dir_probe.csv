@@ -1,0 +1,5 @@
+path,url,status,length,content_type,location,soft_404,interesting,error
+/admin,http://localhost:3000/admin,200,9984,text/html; charset=UTF-8,,True,False,
+/login,http://localhost:3000/login,200,9984,text/html; charset=UTF-8,,True,False,
+/backup,http://localhost:3000/backup,200,9984,text/html; charset=UTF-8,,True,False,
+/assets,http://localhost:3000/assets,301,156,text/html; charset=UTF-8,/assets/,False,True,

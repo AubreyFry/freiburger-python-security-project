@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "tool": "reconlite",
+    "tool_version": "1.0",
+    "target": "http://localhost:3000/",
+    "started_utc": "2026-11-13 21:08:59",
+    "delay_seconds": 0.2,
+    "max_requests": 500,
+    "spider_depth": 1,
+    "wordlist": [
+      "/admin",
+      "/login",
+      "/backup",
+      "/assets"
+    ],
+    "requests_made": 9,
+    "duration_seconds": 1.61
+  },
+  "headers": {
+    "url": "http://localhost:3000/",
+    "status": 200,
+    "headers": {
+      "Access-Control-Allow-Origin": "*",
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Feature-Policy": "payment 'self'",
+      "X-Recruiting": "/#/jobs",
+      "Accept-Ranges": "bytes",
+      "Cache-Control": "public, max-age=0",
+      "Last-Modified": "Sun, 08 Nov 2026 19:11:10 GMT",
+      "ETag": "W/\"2700-1a1bc9258b0\"",
+      "Content-Type": "text/html; charset=UTF-8",
+      "Vary": "Accept-Encoding",
+      "Content-Encoding": "gzip",
+      "Date": "Fri, 13 Nov 2026 21:08:59 GMT",
+      "Connection": "keep-alive",
+      "Keep-Alive": "timeout=5",
+      "Transfer-Encoding": "chunked"
+    },
+    "missing": [
+      {
+        "header": "Content-Security-Policy",
+        "recommendation": "Add a Content-Security-Policy that limits where scripts, styles, and frames can load from."
+      },
+      {
+        "header": "Strict-Transport-Security",
+        "recommendation": "Serve the site over HTTPS and enable HSTS (Strict-Transport-Security) so browsers refuse plain HTTP."
+      },
+      {
+        "header": "Referrer-Policy",
+        "recommendation": "Set Referrer-Policy: strict-origin-when-cross-origin (or stricter) so full URLs don't leak to other sites."
+      },
+      {
+        "header": "Permissions-Policy",
+        "recommendation": "Set a Permissions-Policy that turns off browser features the site doesn't use (camera, microphone, geolocation)."
+      }
+    ],
+    "weak": [
+      {
+        "header": "Access-Control-Allow-Origin",
+        "value": "*",
+        "reason": "CORS is open to every website ('*').",
+        "recommendation": "Limit Access-Control-Allow-Origin to the specific origins that need it."
+      },
+      {
+        "header": "Feature-Policy",
+        "value": "payment 'self'",
+        "reason": "Feature-Policy is the old, deprecated name and modern browsers ignore it.",
+        "recommendation": "Replace Feature-Policy with Permissions-Policy."
+      }
+    ],
+    "info_leaks": [],
+    "notes": [
+      "Target uses plain HTTP; browsers ignore HSTS over HTTP, so HSTS only matters once HTTPS is enabled."
+    ]
+  },
+  "robots": {
+    "url": "http://localhost:3000/robots.txt",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "found": true,
+    "user_agents": [
+      "*"
+    ],
+    "disallow": [
+      "/ftp"
+    ],
+    "allow": [],
+    "sitemaps": [],
+    "raw": "User-agent: *\nDisallow: /ftp"
+  },
+  "spider": {
+    "start_url": "http://localhost:3000/",
+    "max_depth": 1,
+    "pages": [
+      {
+        "url": "http://localhost:3000/",
+        "depth": 0,
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 9984,
+        "links_found": 0,
+        "title": "OWASP Juice Shop"
+      }
+    ],
+    "offsite_links_skipped": [],
+    "not_visited_due_to_page_limit": 0
+  },
+  "fingerprint": {
+    "url": "http://localhost:3000/",
+    "status": 200,
+    "size_bytes": 9984,
+    "sha256": "7a077ea089234d5fb7e9f5775a384573ec97da96d8c74aaf230984fc723fe48b",
+    "title": "OWASP Juice Shop",
+    "script_src_count": 3,
+    "inline_script_count": 2,
+    "top_scripts": [
+      {
+        "src": "http://localhost:3000/polyfills.js",
+        "same_origin": true,
+        "has_integrity": false
+      },
+      {
+        "src": "http://localhost:3000/scripts.js",
+        "same_origin": true,
+        "has_integrity": false
+      },
+      {
+        "src": "http://localhost:3000/main.js",
+        "same_origin": true,
+        "has_integrity": false
+      }
+    ]
+  },
+  "directories": {
+    "base": "http://localhost:3000/",
+    "baseline": {
+      "url": "http://localhost:3000/reconlite-baseline-cdec034af8d5",
+      "status": 200,
+      "length": 9984,
+      "sha256": "7a077ea089234d5fb7e9f5775a384573ec97da96d8c74aaf230984fc723fe48b"
+    },
+    "results": [
+      {
+        "path": "/admin",
+        "url": "http://localhost:3000/admin",
+        "status": 200,
+        "length": 9984,
+        "content_type": "text/html; charset=UTF-8",
+        "location": null,
+        "soft_404": true,
+        "interesting": false
+      },
+      {
+        "path": "/login",
+        "url": "http://localhost:3000/login",
+        "status": 200,
+        "length": 9984,
+        "content_type": "text/html; charset=UTF-8",
+        "location": null,
+        "soft_404": true,
+        "interesting": false
+      },
+      {
+        "path": "/backup",
+        "url": "http://localhost:3000/backup",
+        "status": 200,
+        "length": 9984,
+        "content_type": "text/html; charset=UTF-8",
+        "location": null,
+        "soft_404": true,
+        "interesting": false
+      },
+      {
+        "path": "/assets",
+        "url": "http://localhost:3000/assets",
+        "status": 301,
+        "length": 156,
+        "content_type": "text/html; charset=UTF-8",
+        "location": "/assets/",
+        "soft_404": false,
+        "interesting": true
+      }
+    ]
+  },
+  "recommendations": [
+    "Add a Content-Security-Policy that limits where scripts, styles, and frames can load from.",
+    "Serve the site over HTTPS and enable HSTS (Strict-Transport-Security) so browsers refuse plain HTTP.",
+    "Set Referrer-Policy: strict-origin-when-cross-origin (or stricter) so full URLs don't leak to other sites.",
+    "Set a Permissions-Policy that turns off browser features the site doesn't use (camera, microphone, geolocation).",
+    "Limit Access-Control-Allow-Origin to the specific origins that need it.",
+    "Replace Feature-Policy with Permissions-Policy.",
+    "Don't rely on robots.txt to hide sensitive paths; it publicly lists /ftp. Protect those paths with authentication or remove them from the web root.",
+    "Add Subresource Integrity (integrity=\"sha384-...\") to <script> tags and monitor the homepage hash so unexpected changes to served code are detected.",
+    "Place a web application firewall (WAF) in front of the app and alert on bursts of requests to missing paths, which is what directory probing looks like in logs."
+  ],
+  "errors": []
+}
